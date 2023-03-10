@@ -1,0 +1,75 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: #51011a;
+    position: relative;
+}
+
+.header{
+    padding: 20px;
+    top: 0;
+    position: relative;
+    display: flex;
+}
+
+.logo img{
+    max-width: 250px;
+    padding: 30px;
+}
+
+.titulo{
+    font-family: 'Julee', cursive;
+    margin-left: 40px;
+    font-size: 30px;
+    color: #e7c019;
+}
+
+.rombo{
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+}
+
+.info{
+    padding: 40px;
+    font-size: 22px;
+}
+
+.info span{
+    color: #e7c019;
+}
+
+.info p{
+    color: #b0acac;
+}
+
+.lista{
+    padding: 40px;
+    position: absolute;
+}
+
+.lista h3{
+    font-size: 30px;
+    color: #e7c019;
+}
+
+.lista ul{
+    padding: 40px;
+    background: linear-gradient(to bottom right, #5f5f5f , #333 , #1a1919);
+    max-width: 270px;
+    border: 8px solid;
+    border-radius: 0px 50px;
+    border-color: #e7c019;
+}
+
+.lista li{
+    padding: 10px 30px 10px 30px;
+    font-size: 20px;
+    color: #51011a;
+    font-weight: bold;
+}

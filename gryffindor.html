@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casas de Hogwarts</title>
+    <link rel="stylesheet" href="gryffindor.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julee&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bc5fa94aef.js" crossorigin="anonymous"></script>
+</head>
+<!-- En data-barba="wrapper" se pone el contenido que no va a cambiar entre paginas -->
+<body data-barba="wrapper">
+    <div class="load-container">
+        <div class="loading-screen"></div>
+    </div>
+
+    <!-- ponga aquí el contenido que desea cambiar entre sus páginas, como su contenido principal <h1> o <p> -->
+    <main data-barba = "container"  data-barba-namespace = "home">
+        <div class="header">
+            <div class="logo">
+                <img src="imagenes/LogoGryffindorColor.png" alt="escudo de Gryffindor">
+            </div>
+            <div class="titulo">
+                <h2>GRYFFINDOR</h2>
+            </div>
+        </div>
+        <div class="info">
+            <p></p>
+            <p><span>Jefa de la casa:</span> Minerva McGonagall.</p>
+            <p><span>Colores representativos:</span> escarlata y dorado.</p>
+            <p><span>Animal representativo:</span> león.</p>
+            <p><span>Fundador:</span> Godric Gryffindor.</p>
+            <p><span>Fantasma:</span> Sir Nicholas de Mimsy-Porpington (más conocido como Nick Casi Decapitado).</p>
+            <p><span>Características:</span>  coraje y valentía. Un buen miembro de Gryffindor tiene gran osadía, temple y caballerosidad. Son capaces de todo por defender en lo que creen y nunca se dan por vencidos. También son capaces de romper las reglas si es necesario y les encantan los retos, cuanto más difíciles, mejor. Se atreven a lo que la mayoría no se atreve. En cada obstáculo ven una oportunidad para demostrar quienes son realmente.</p>
+            <p><span>Localización:</span> la Torre de Gryffindor, o torre este, en el séptimo piso del castillo. A un lado de la torre oeste, o torre de Ravenclaw.</p>
+            <p><span>Curiosidad:</span> Godric Gryffindor solo acogía a los magos valientes y honorables, ya que eso era lo que el fundador más apreciaba.</p>
+            <p><span>Reliquia más preciada:</span> su espada (perteneció a Godric Gryffindor), aunque también está el Sombrero Seleccionador, que es el sombrero de Godric Gryffindor.</p>
+            <p><span>Significado del nombre:</span> grifo dorado.</p>
+            <p><span>Elemento de Gryffindor:</span> fuego, pues está asociado con el valor y el coraje de esta casa.</p>
+        </div>
+        <div class="lista lista1">
+            <h3>Listado de alumnos famosos</h3>
+            <ul>
+                <li>Harry Potter</li>
+                <li>Albus Dumbledore</li>
+                <li>Minerva McGonagall</li>
+                <li>Sirius Black</li>
+                <li>Remus Lupin</li>
+                <li>James Potter</li>
+                <li>Lily Evans</li>
+            </ul>
+        </div>
+    </main>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+<script src="https://unpkg.com/@barba/core"></script>
+<script src="custom.js"></script>
+</html>

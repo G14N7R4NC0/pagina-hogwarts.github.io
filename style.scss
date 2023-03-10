@@ -1,0 +1,756 @@
+
+
+html {
+	--color-bg: #191919;
+	--color-a: #de4747;
+	box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image:  url(imagenes/Proyecto\ Hogwarts\ -\ Fondo_Mesa\ de\ trabajo\ 1_Mesa\ de\ trabajo\ 1.jpg);
+    background-repeat: no-repeat;
+    transition: all .3s;
+}
+
+.c-cursor {
+	--size: 20px;
+    border: none;
+	position: fixed;
+	width: var(--size);
+	height: var(--size);
+	top: calc(var(--size)/-2);
+	left: calc(var(--size)/-2);
+	transform: translate(var(--cursor-x, -100px), var(--cursor-y, -100px)) translateZ(0);
+	pointer-events: none;
+	transition: none;
+	z-index: 11000;
+	will-change: transform;
+	
+	&__inner{
+		display: block;
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+        /*efecto lumos*/
+		/*
+        background: radial-gradient(circle, rgb(221, 221, 227) 0%,rgba(98, 98, 222, 0.315) 20%, rgba(47, 31, 218, 0.274) 90%);
+        box-shadow: 0 0 30px 20px rgba(47, 31, 218, 0.372) ;
+        */
+        /*efecto lumos v2*/
+        background: radial-gradient(circle, rgb(200, 200, 233), rgba(102, 102, 229, 0.698)) ;
+        box-shadow: 0 0 20px 10px rgba(124, 118, 209, 0.544),
+        0 0 30px 20px rgba(96, 85, 219, 0.583), 
+        0 0 40px 50px rgba(47, 31, 218, 0.837);
+        border: 0;
+		transition: all 0.15s ease-in-out;
+		opacity: 1;
+		transform: scale(1) translateZ(0);
+	}
+	&.is-clicked &__inner {
+		transform: scale(1.5) translateZ(0);
+	}
+	&.is-hidden &__inner{
+		opacity: 0;
+	}
+	&.is-link-hovered &__inner {
+		transform: scale(0.5) translateZ(0);
+		background-color: var(--color-a);
+	}
+}
+
+.has-custom-cursor{
+	&,
+	*{
+		cursor: none!important;
+	}
+}
+
+.subtitulo{
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.subtitulo i{
+    color: #fff;
+    padding: 10px 40px;
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.subtitulo .linea{
+    width: 60%;
+}
+
+.subtitulo .rombo{
+    color: #fff;
+}
+
+.header{
+    width: 100%;
+    top: 0;
+    position: relative;
+    display: flex;
+}
+
+.logo{
+    padding: 80px;
+}
+
+.logo img{
+    max-width: 400px;
+}
+
+.titulo{
+    
+    color: #fff;
+    display: block;
+}
+
+.titulo h2{
+    margin: 50px 0;
+    font-family: 'bluu-next-bold', sans-serif;
+    font-size: 100px;
+    line-height: 100px;
+}
+
+.titulo i{
+    letter-spacing: 2px;
+    line-height: 30px;
+}
+
+/*
+.casas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+*/
+
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Card de Gryffindor*/
+
+.gryffindor{
+    width: 100%;
+    height: 600px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .card-G{
+    padding: 20px;
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+}
+
+.container .card-G .face{
+    width: 400px;
+    height: 300px;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.container .card-G .face.face1{
+    position: relative;
+    background: #130a1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateX(250px);
+}
+
+.container .card-G:hover .face.face1{
+    background: #760f1a;
+    transform: translateX(0px);
+}
+
+/*
+.container .card-G .face.face1 .content{
+    opacity: 0.2;
+    transition: 0.5s;
+}
+
+.container .card-G:hover .face.face1 .content{
+    opacity: 1;
+}
+*/
+
+
+
+.container .card-G .face.face1 .content img{
+    max-width: 200px;
+}
+
+.container .card-G .face.face1 .content img:last-child{
+    display: none;
+}
+
+.container .card-G:hover .face.face1 .content img:last-child{
+    display: block;
+}
+
+.container .card-G:hover .face.face1 .content img:first-child{
+    display: none;
+}
+
+/*
+.container .card-G.face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+}
+*/
+
+.container .card-G .face.face2{
+    position: relative;
+    background: #e69325;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.55);
+    transform: translateX(-150px);
+}
+
+.container .card-G:hover .face.face2{
+    transform: translateX(-10px);
+    border-radius: 0px;
+}
+
+.container .card-G .face.face2 .content h3{
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    color: #fff;
+}
+
+.container .card-G .face.face2 .content p{
+    margin: 10px;
+    padding: 15px;
+    line-height: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #760f1a;
+}
+
+.container .card-G .face.face2 .content a{
+    margin: 5px 0 0;
+    width: 70px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.container .card-G .face.face2 .content a:hover{
+    background: #760f1a;
+    color: #fff
+}
+
+/*Card de Hufflepuff*/
+
+.hufflepuff{
+    width: 100%;
+    height: 600px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .card-H{
+    padding: 20px;
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+}
+
+.container .card-H .face{
+    width: 400px;
+    height: 300px;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.container .card-H .face.face1{
+    position: relative;
+    background: #130a1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateX(250px);
+}
+
+.container .card-H:hover .face.face1{
+    background: #e69325;
+    transform: translateX(410px);
+}
+
+.container .card-H .face.face1 .content img{
+    max-width: 200px;
+}
+
+.container .card-H .face.face1 .content img:last-child{
+    display: none;
+}
+
+.container .card-H:hover .face.face1 .content img:last-child{
+    display: block;
+}
+
+.container .card-H:hover .face.face1 .content img:first-child{
+    display: none;
+}
+
+.container .card-H .face.face2{
+    position: relative;
+    background: #000001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.55);
+    transform: translateX(-150px);
+}
+
+.container .card-H:hover .face.face2{
+    transform: translateX(-350px);
+    border-radius: 0px;
+}
+
+.container .card-H .face.face2 .content h3{
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    color: #fff;
+}
+
+.container .card-H .face.face2 .content p{
+    margin: 10px;
+    padding: 15px;
+    line-height: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #e69325;
+}
+
+.container .card-H .face.face2 .content a{
+    margin: 5px 0 0;
+    width: 70px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.container .card-H .face.face2 .content a:hover{
+    background: #e69325;
+    color: #fff
+}
+
+/*Card de Ravenclaw*/
+
+.ravenclaw{
+    width: 100%;
+    height: 600px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .card-R{
+    padding: 20px;
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+}
+
+.container .card-R .face{
+    width: 400px;
+    height: 300px;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.container .card-R .face.face1{
+    position: relative;
+    background: #130a1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateX(250px);
+}
+
+.container .card-R:hover .face.face1{
+    background: #213d76;
+    transform: translateX(0px);
+}
+
+.container .card-R .face.face1 .content img{
+    max-width: 200px;
+}
+
+.container .card-R .face.face1 .content img:last-child{
+    display: none;
+}
+
+.container .card-R:hover .face.face1 .content img:last-child{
+    display: block;
+}
+
+.container .card-R:hover .face.face1 .content img:first-child{
+    display: none;
+}
+
+.container .card-R .face.face2{
+    position: relative;
+    background: #8b6631;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.55);
+    transform: translateX(-150px);
+}
+
+.container .card-R:hover .face.face2{
+    transform: translateX(-10px);
+    border-radius: 0px;
+}
+
+.container .card-R .face.face2 .content h3{
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    color: #fff;
+}
+
+.container .card-R .face.face2 .content p{
+    margin: 10px;
+    padding: 15px;
+    line-height: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #213d76;
+}
+
+.container .card-R .face.face2 .content a{
+    margin: 5px 0 0;
+    width: 70px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.container .card-R .face.face2 .content a:hover{
+    background: #213d76;
+    color: #fff
+}
+
+/*Card de Slytherin*/
+
+.slytherin{
+    width: 100%;
+    height: 600px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .card-S{
+    padding: 20px;
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+}
+
+.container .card-S .face{
+    width: 400px;
+    height: 300px;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.container .card-S .face.face1{
+    position: relative;
+    background: #130a1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateX(250px);
+}
+
+.container .card-S:hover .face.face1{
+    background: #053522;
+    transform: translateX(410px);
+}
+
+.container .card-S .face.face1 .content img{
+    max-width: 200px;
+}
+
+.container .card-S .face.face1 .content img:last-child{
+    display: none;
+}
+
+.container .card-S:hover .face.face1 .content img:last-child{
+    display: block;
+}
+
+.container .card-S:hover .face.face1 .content img:first-child{
+    display: none;
+}
+
+.container .card-S .face.face2{
+    position: relative;
+    background: #75797b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.55);
+    transform: translateX(-150px);
+}
+
+.container .card-S:hover .face.face2{
+    transform: translateX(-350px);
+    border-radius: 0px;
+}
+
+.container .card-S .face.face2 .content h3{
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    color: #fff;
+}
+
+.container .card-S .face.face2 .content p{
+    margin: 10px;
+    padding: 15px;
+    line-height: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #053522;
+}
+
+.container .card-S .face.face2 .content a{
+    margin: 5px 0 0;
+    width: 70px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.container .card-S .face.face2 .content a:hover{
+    background: #053522;
+    color: #fff
+}
+
+@media (min-width:320px) and (max-width:780px){
+
+    .container{
+        width: 100%;
+        position: relative;
+        display: grid;
+        justify-content: space-around;
+    }
+    
+    .header{
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .logo{
+        padding: 80px 50px;
+        
+    }
+    
+    .logo img{
+        max-width: 400px;
+    }
+
+    .subtitulo {
+        padding-left: 10px;
+    }
+    
+    .titulo{
+        width: 420px;
+        padding: 0 30px;
+    }
+    
+    .titulo h2{
+        font-size: 70px;
+    }
+
+    .container{
+        width: 100%;
+    }
+
+    .gryffindor{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .container .card-G{
+        display: block;
+    }
+    
+    .container .card-G .face.face1{
+        transform: translateY(200px);
+    }
+    
+    .container .card-G:hover .face.face1{
+        transform: translateY(50px);
+    }
+
+    .container .card-G .face.face2{
+        transform: translateY(-100px);
+    }
+    
+    .container .card-G:hover .face.face2{
+        transform: translateY(40px);
+    }
+
+    .hufflepuff{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .container .card-H{
+        display: block;
+    }
+    
+    .container .card-H .face.face1{
+        transform: translateY(200px);
+    }
+    
+    .container .card-H:hover .face.face1{
+        transform: translateY(50px);
+    }
+
+    .container .card-H .face.face2{
+        transform: translateY(-100px);
+    }
+    
+    .container .card-H:hover .face.face2{
+        transform: translateY(40px);
+    }
+
+    .ravenclaw{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .container .card-R{
+        display: block;
+    }
+    
+    .container .card-R .face.face1{
+        transform: translateY(200px);
+    }
+    
+    .container .card-R:hover .face.face1{
+        transform: translateY(50px);
+    }
+
+    .container .card-R .face.face2{
+        transform: translateY(-100px);
+    }
+    
+    .container .card-R:hover .face.face2{
+        transform: translateY(40px);
+    }
+
+    .slytherin{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .container .card-S{
+        display: block;
+    }
+    
+    .container .card-S .face.face1{
+        transform: translateY(200px);
+    }
+    
+    .container .card-S:hover .face.face1{
+        transform: translateY(50px);
+    }
+
+    .container .card-S .face.face2{
+        transform: translateY(-100px);
+    }
+    
+    .container .card-S:hover .face.face2{
+        transform: translateY(40px);
+    }
+}

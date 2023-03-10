@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casas de Hogwarts</title>
+    <link rel="stylesheet" href="hufflepuff.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julee&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bc5fa94aef.js" crossorigin="anonymous"></script>
+</head>
+<!-- En data-barba="wrapper" se pone el contenido que no va a cambiar entre paginas -->
+<body data-barba="wrapper">
+    <div class="load-container">
+        <div class="loading-screen"></div>
+    </div>
+
+    <!-- ponga aquí el contenido que desea cambiar entre sus páginas, como su contenido principal <h1> o <p> -->
+    <main data-barba = "container"  data-barba-namespace = "home">
+        <div class="header">
+            <div class="logo">
+                <img src="imagenes/Logo_Hufflepuff_2.webp" alt="escudo de Hufflepuff">
+            </div>
+            <div class="titulo">
+                <h2>HUFFLEPUFF</h2>
+            </div>
+        </div>
+
+        <div class="info">
+            <p><span>Jefa de la casa:</span> Pomona Sprout.</p>
+            <p><span>Colores representativos:</span> amarillo.</p>
+            <p><span>Animal representativo:</span> tejón.</p>
+            <p><span>Fundador:</span> Helga Hufflepuff.</p>
+            <p><span>Fantasma:</span> El Fraile Gordo.</p>
+            <p><span>Características:</span>  justos, leales y trabajadores. Los hufflepuff son buenas personas y suelen caer bien a todo el mundo. Son pacientes, tolerantes y siempre harán todo de forma honrada, sin hacer trampas y respetando las reglas.</p>
+            <p><span>Localización:</span> la entrada a la sala común está escondida en una pila de grandes barriles en un hueco a la derecha del corredor de la cocina. Golpea el segundo barril empezando a contar desde abajo, en medio de la segunda línea, siguiendo el ritmo de “Helga Hufflepuff” y la tapa se abrirá. Es la única casa de Hogwarts que tiene una forma de repeler a los extraños. Si se golpea la tapa equivocada o el ritmo no es el correcto, el intruso será bañado en vinagre.</p>
+            <p><span>Curiosidad:</span> la sala común de Hufflepuff se encuentra al lado de las cocinas (los sótanos) debido a que Helga Hufflepuff tenía un gran arte en la gastronomía y muchas de sus recetas las siguen usando los elfos de Hogwarts.
+            </p>
+            <p><span>Reliquia más preciada:</span> la copa de Helga Hufflepuff, que más tarde se convirtió en un Horrocrux por lord Voldemort que se la robó a una anciana llamada Hepzibah Smith.
+            </p>
+            <p><span>Significado del nombre:</span> es un desarrollo a partir de los verbos ingleses "huff" (jadear) y "puff" (resoplido), en relación con la laboriosidad que se les atribuye a sus miembros.</p>
+            <p><span>Elemento de Hufflepuff:</span> tierra, asociada a la laboriosidad propia de esta casa.</p>
+        </div>
+
+        <h5>Listado de alumnos famosos</h5>
+        <ul>
+            <li>Newt Scamander</li>
+            <li>Theseus Scamander</li>
+            <li>Cedric Diggory</li>
+            <li>Pomona Sprout</li>
+            <li>Nymphadora Tonks</li>
+            <li>Artemesia Lufkin</li>
+            <li>Hengist de Woodcroft</li>
+        </ul>
+    </main>
+</body>
+<script src="https://unpkg.com/@barba/core"></script>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casas de Hogwarts</title>
+    <link rel="stylesheet" href="ravenclaw.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julee&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bc5fa94aef.js" crossorigin="anonymous"></script>
+</head>
+<!-- En data-barba="wrapper" se pone el contenido que no va a cambiar entre paginas -->
+<body data-barba="wrapper">
+    <div class="load-container">
+        <div class="loading-screen"></div>
+    </div>
+
+    <!-- ponga aquí el contenido que desea cambiar entre sus páginas, como su contenido principal <h1> o <p> -->
+    <main data-barba = "container"  data-barba-namespace = "home">
+        <div class="header">
+            <div class="logo">
+                <img src="imagenes/ravenclaw.com.png" alt="escudo de Ravenclaw">
+            </div>
+            <div class="titulo">
+                <h2>RAVENCLAW</h2>
+            </div>
+        </div>
+
+        <div class="info">
+            <p><span>Jefa de la casa:</span> Filius Flitwick.</p>
+            <p><span>Colores representativos:</span> azul y bronce.</p>
+            <p><span>Animal representativo:</span> águila (a pesar de que el nombre de la casa incluya la palabra 'cuervo' en inglés).</p>
+            <p><span>Fundador:</span> Rowena Ravenclaw.</p>
+            <p><span>Fantasma:</span> Helena Ravenclaw (hija de Rowena Ravenclaw), conocida como la Dama Gris.</p>
+            <p><span>Características:</span> inteligencia, curiosidad y sabiduría. Una mente dispuesta y creativa.</p>
+            <p><span>Localización:</span> la torre de Ravenclaw, o torre oeste, en el séptimo piso del castillo, a un lado de la torre este o torre de Gryffindor.</p>
+            <p><span>Curiosidad:</span>Isolt Sayre, fundadora del Colegio Ilvermorny de Magia y Hechicería, quería ser una Ravenclaw cuando era niña, pero nunca pudo asistir a Hogwarts. Su elección del azul como color para el uniforme escolar de Ilvermorny se inspiró en Ravenclaw.</p>
+            <p><span>Reliquia más preciada:</span> La diadema de Rowena Ravenclaw, una tiara que potencia la sabiduría de quien la usa. Fue robada por la hija de la fundadora, Helena, quien pretendía ser más inteligente que su madre.
+            </p>
+            <p><span>Significado del nombre:</span> garra de cuervo (aunque en la versión francesa se llama Serdaigle -del francés serre d'aigle, literalmente garra de águila-).</p>
+            <p><span>Elemento de Ravenclaw:</span> aire, ya que se asocia con la creatividad y la sabiduría, dos características fundamentales de esta casa.</p>
+        </div>
+
+        <h5>Listado de alumnos famosos</h5>
+        <ul>
+            <li>Helena Ravenclaw</li>
+            <li>Gilderoy Lockhart</li>
+            <li>Garrick Ollivander</li>
+            <li>Quirinus Quirrell</li>
+            <li>Filius Flitwick</li>
+            <li>Sybill Trelawney</li>
+        </ul>
+    </main>
+</body>
+<script src="https://unpkg.com/@barba/core"></script>
+</html>
